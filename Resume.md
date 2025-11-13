@@ -34,7 +34,7 @@
     <em>Web editor at the Faculty of TPM, TU Delft. Responsible for managing and optimizing faculty websites, focusing on usability, up-to-date content, and online visibility.</em>
   </div>
   <div class="entry-right">
-    <em>Juli 2024 – Presesnt</em>
+    <em>Juli 2024 – Present</em>
   </div>
 </div>
 
