@@ -8,7 +8,7 @@ Hello! Welcome to my portfolio repository. Here you’ll find an overview of som
 
   <a href="https://okantaskirmaz.github.io/reimagining_port_cities" target="_blank" class="card-link">
     <div class="card">
-      <img src="assets/Port cities 1.jpg" alt="Sfeerbeeld" />
+      <img src="assets/Port Cities 4.jpg" alt="Sfeerbeeld" />
       <div class="card-text">
         Minor, (Re)Imagining Port Cities: Understanding Space, Society and Culture
       </div>
