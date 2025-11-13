@@ -6,7 +6,7 @@ Hello! Welcome to my portfolio repository. Here you’ll find an overview of som
 
 <div class="project-cards">
 
-  <a href="https://okantaskirmaz.github.io/reimagining_port_cities" target="_blank" class="card-link">
+  <a href="https://okantaskirmaz.github.io/reimagining_port_cities" class="card-link">
     <div class="card">
       <img src="assets/Port Cities 4.jpg" alt="Sfeerbeeld" />
       <div class="card-text">
