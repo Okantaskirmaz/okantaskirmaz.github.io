@@ -5,28 +5,14 @@ The final part of the minor, focuses on how the Maasboulevard near the Rhijnspoo
 <div class="rpc-container">
   <div class="rpc-text"></div>
   <div class="rpc-gallery">
-    <a href="assets/Port Cities 1.jpg" target="_blank" rel="noopener">
-      <img src="assets/Port Cities 1.jpg" alt="Port Cities concept image 1">
-    </a>
-    <a href="assets/Port Cities 2.jpg" target="_blank" rel="noopener">
-      <img src="assets/Port Cities 2.jpg" alt="Port Cities concept image 2">
-    </a>
-    <a href="assets/Port Cities 3.jpg" target="_blank" rel="noopener">
-      <img src="assets/Port Cities 3.jpg" alt="Port Cities concept image 3">
-    </a>
-    <a href="assets/Port Cities 4.jpg" target="_blank" rel="noopener">
-      <img src="assets/Port Cities 4.jpg" alt="Port Cities concept image 4">
-    </a>
-    <a href="assets/Port Cities 5.jpg" target="_blank" rel="noopener">
-      <img src="assets/Port Cities 5.jpg" alt="Port Cities concept image 5">
-    </a>
+    <img class="zoomable" src="assets/Port Cities 1.jpg" alt="Port Cities concept image 1">
+    <img class="zoomable" src="assets/Port Cities 2.jpg" alt="Port Cities concept image 2">
+    <img class="zoomable" src="assets/Port Cities 3.jpg" alt="Port Cities concept image 3">
+    <img class="zoomable" src="assets/Port Cities 4.jpg" alt="Port Cities concept image 4">
+    <img class="zoomable" src="assets/Port Cities 5.jpg" alt="Port Cities concept image 5">
   </div>
 </div>
 <br>
-
-
-
-
 
 <style>
 header img {
@@ -46,4 +32,36 @@ a:hover {
   text-decoration: none;
   font-weight: 400;       
 }
+  
+.rpc-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.zoomable {
+  max-width: 220px;           /* pas aan als je ze groter/kleiner wilt */
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.zoomable.zoomed {
+  transform: scale(2);        /* hoeveelheid zoom */
+  cursor: zoom-out;
+  position: relative;
+  z-index: 10;
+}
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.zoomable');
+
+  images.forEach(function (img) {
+    img.addEventListener('click', function () {
+      img.classList.toggle('zoomed');
+    });
+  });
+});
+</script>
+
