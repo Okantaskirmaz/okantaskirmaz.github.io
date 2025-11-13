@@ -13,13 +13,15 @@ The final part of the minor, focuses on how the Maasboulevard near the Rhijnspoo
   </div>
 </div>
 <br>
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+</div>
 
 <style>
 header img {
   width: 140px !important;
   height: auto !important;
 }  
-
 
 a {
   color: #b20738;
@@ -51,17 +53,45 @@ a:hover {
   position: relative;
   z-index: 10;
 }
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const images = document.querySelectorAll('.zoomable');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
 
-  images.forEach(function (img) {
-    img.addEventListener('click', function () {
-      img.classList.toggle('zoomed');
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;   // zet de juiste foto
+      lightbox.style.display = 'flex';
     });
   });
+
+  // klik ergens buiten de foto om te sluiten
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
 });
+</script>
 </script>
 
