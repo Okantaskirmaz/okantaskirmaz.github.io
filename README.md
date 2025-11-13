@@ -6,7 +6,7 @@ Hello! Welcome to my portfolio repository. Here you’ll find an overview of som
 
 <div class="project-cards">
 
-  <a href="https://urbanjeans.github.io/dfn-dashboard" target="_blank" class="card-link">
+  <a href="https://okantaskirmaz.github.io/Reimagining Port Cities" target="_blank" class="card-link">
     <div class="card">
       <img src="assets/Port cities 1.jpg" alt="Sfeerbeeld" />
       <div class="card-text">
