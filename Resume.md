@@ -44,7 +44,7 @@
 ### Committee work
 <div class="entry">
   <div class="entry-left">
-    Committee member | Festable | <br>
+    <a href='[https://okantaskirmaz.github.io/](https://www.students4sustainability.nl/nl/evenementen/festable-61)'>Committee member | Festable |</a> <br><br> 
     <em>Festable is a unique event designed to raise student awareness about sustainability in a fun and trendy way. Together with five other enthusiastic students, we are organizing this event. From a DJ contest at an iconic location to inspiring talks and workshops on circular festivals, we combine entertainment with education, making sustainability accessible and exciting for everyone!</em>
   </div>
   <div class="entry-right">
