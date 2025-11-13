@@ -40,13 +40,13 @@ a:hover {
 }
 
 .zoomable {
-  max-width: 1080px;           /* pas aan als je ze groter/kleiner wilt */
+  max-width: 220px;           /* pas aan als je ze groter/kleiner wilt */
   cursor: zoom-in;
   transition: transform 0.3s ease;
 }
 
 .zoomable.zoomed {
-  transform: scale(2);        /* hoeveelheid zoom */
+  transform: scale(5);        /* hoeveelheid zoom */
   cursor: zoom-out;
   position: relative;
   z-index: 10;
