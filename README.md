@@ -15,6 +15,15 @@ Hello! Welcome to my portfolio repository. Here you’ll find an overview of sev
     </div>
   </a>
 
+    <a href="https://okantaskirmaz.github.io/Studio_de_Nieuwe_Tuinstad" class="card-link">
+    <div class="card">
+      <img src="assets/Poster_3.jpg" alt="Sfeerbeeld" />
+      <div class="card-text">
+        Studio de Nieuwe Tuinstad
+      </div>
+    </div>
+  </a>
+
 <hr>
 
 
