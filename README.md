@@ -17,7 +17,7 @@ Hello! Welcome to my portfolio repository. Here you’ll find an overview of sev
 
     <a href="https://okantaskirmaz.github.io/Studio_de_Nieuwe_Tuinstad" class="card-link">
     <div class="card">
-      <img src="assets/Poster_3.jpg" alt="Sfeerbeeld" />
+      <img src="assets/Poster_1.jpg" alt="Sfeerbeeld" />
       <div class="card-text">
         Studio de Nieuwe Tuinstad
       </div>
