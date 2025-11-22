@@ -5,11 +5,10 @@ The final part of the first quarter of the minor focuses on how the Maasboulevar
 <div class="rpc-container">
   <div class="rpc-text"></div>
   <div class="rpc-gallery">
-    <img class="zoomable" src="assets/Port Cities 1.jpg" alt="Port Cities concept image 1">
-    <img class="zoomable" src="assets/Port Cities 2.jpg" alt="Port Cities concept image 2">
-    <img class="zoomable" src="assets/Port Cities 3.jpg" alt="Port Cities concept image 3">
-    <img class="zoomable" src="assets/Port Cities 4.jpg" alt="Port Cities concept image 4">
-    <img class="zoomable" src="assets/Port Cities 5.jpg" alt="Port Cities concept image 5">
+    <img class="zoomable" src="assets/Poster_1.jpg" alt="ON4 concept image 1">
+    <img class="zoomable" src="assets/Poster_2.jpg" alt="ON4 concept image 2">
+    <img class="zoomable" src="assets/Poster_3.jpg" alt="ON4 concept image 3">
+    <img class="zoomable" src="assets/Poster met maquette.jpg" alt="ON4 concept image 4">
   </div>
 </div>
 <br>
