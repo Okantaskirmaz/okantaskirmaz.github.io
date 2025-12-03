@@ -85,7 +85,9 @@ a:hover {
   padding: 0.6rem 1rem;
   cursor: pointer;
   border-radius: 8px;
-  margin: 0 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   transition: background 0.2s ease;
 }
 
@@ -98,11 +100,11 @@ a:hover {
 }
 
 .lightbox-nav.prev {
-  order: 0;
+  left: 32px;
 }
 
 .lightbox-nav.next {
-  order: 2;
+  right: 32px;
 }
 </style>
 
