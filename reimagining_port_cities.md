@@ -2,6 +2,8 @@
 
 The final part of the first quarter of the minor focuses on how the Maasboulevard near the Rhijnspoorkade in Rotterdam could evolve into a sustainable and maritime public space for the future. Positioned along the Nieuwe Maas, the site offers a unique interface between the city and the river, a place where movement, ecology, and leisure converge.
 
+Grade: 8
+
 <div class="rpc-container">
   <div class="rpc-text"></div>
   <div class="rpc-gallery">
