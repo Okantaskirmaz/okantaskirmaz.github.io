@@ -16,7 +16,9 @@ Grade: 8
 </div>
 <br>
 <div id="lightbox">
+  <button class="lightbox-nav prev" aria-label="Vorige afbeelding">&#10094;</button>
   <img id="lightbox-img" src="">
+  <button class="lightbox-nav next" aria-label="Volgende afbeelding">&#10095;</button>
 </div>
 
 <style>
@@ -74,22 +76,68 @@ a:hover {
   max-height: 90%;
   border-radius: 10px;
 }
+
+.lightbox-nav {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 1rem;
+  transition: background 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-nav:focus-visible {
+  outline: 2px solid #fff;
+}
+
+.lightbox-nav.prev {
+  order: 0;
+}
+
+.lightbox-nav.next {
+  order: 2;
+}
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const images = document.querySelectorAll('.zoomable');
+  const images = Array.from(document.querySelectorAll('.zoomable'));
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
+  const prevBtn = document.querySelector('.lightbox-nav.prev');
+  const nextBtn = document.querySelector('.lightbox-nav.next');
+  let currentIndex = 0;
 
-  images.forEach(img => {
+  function showImage(index) {
+    currentIndex = (index + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+    lightbox.style.display = 'flex';
+  }
+
+  images.forEach((img, index) => {
     img.addEventListener('click', () => {
-      lightboxImg.src = img.src;   // zet de juiste foto
-      lightbox.style.display = 'flex';
+      showImage(index);
     });
   });
 
-  // klik ergens buiten de foto om te sluiten
+  prevBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    showImage(currentIndex + 1);
+  });
+
+  // sluit door buiten de foto te klikken
   lightbox.addEventListener('click', () => {
     lightbox.style.display = 'none';
   });
