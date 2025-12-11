@@ -42,7 +42,7 @@
 ### Work Experience
 <div class="entry">
   <div class="entry-left">
-    Web Editor<br>
+    Web Editor Communications Department<br>
     <em>Web editor at the Faculty of TPM, TU Delft. Responsible for managing and optimizing faculty websites, focusing on usability, up-to-date content, and online visibility.</em>
   </div>
   <div class="entry-right">
