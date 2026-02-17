@@ -1,6 +1,6 @@
 # Projects
 
-Hello! Welcome to my portfolio repository. Here you’ll find an overview of several projects I’ve worked on during my studies as a bachelor architecture student at TU Delft. My interests focus on the urban challenges faced by modern cities and the methods used to address them, including participatory design, GIS, and data-driven analysis. Each link provides a deeper look into different phases of my projects and includes the corresponding documentation and code.
+Hi! welcome to my portfolio. I’m a bachelor architecture student at TU Delft with a growing focus on urbanism and urban design. Here you’ll find a selection of final projects ranging from architectural proposals to urban-scale interventions, presented through drawings and visualizations.
 
 <br>
 
