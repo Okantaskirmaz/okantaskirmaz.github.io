@@ -6,6 +6,15 @@ Hi! welcome to my portfolio. I’m a bachelor architecture student at TU Delft w
 
 <div class="project-cards">
 
+  <a href="https://okantaskirmaz.github.io/Crematorium_Bivium" class="card-link">
+    <div class="card">
+      <img src="assets/Bivium1.png" alt="Sfeerbeeld" />
+      <div class="card-text">
+        graduation project: Crematorium Bivium 
+      </div>
+    </div>
+  </a>
+
   <a href="https://okantaskirmaz.github.io/reimagining_port_cities" class="card-link">
     <div class="card">
       <img src="assets/Port Cities 4.jpg" alt="Sfeerbeeld" />
