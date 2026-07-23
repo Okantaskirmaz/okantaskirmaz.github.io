@@ -1,6 +1,6 @@
 # Crematorium Bivium
 
-For ON4, I am designing a residential building in Het Kamrad, a green 1950s neighbourhood by Dudok in Hilversum. The assignment is to densify the area carefully without losing its existing spatial and landscape qualities. I explore how my design can connect to the characteristic structure of the neighbourhood and its direct relationship with the heath. Green living and nature-inclusive design are central themes in my approach. My building needs to achieve roughly 100 dwellings per hectare, with a mix of housing types and shared facilities. In the end, I translate these ideas into a clear design that shows how a contemporary new garden city can take shape within Het Kamrad.
+For my graduation project, I designed Crematorium Bivium, a peaceful and respectful environment where architecture, nature and ritual come together. The design guides visitors through a gradual transition from public to intimate spaces, while separate routes provide privacy and tranquillity. Natural materials, integrated technical functions and sustainable solutions contribute to a calm and meaningful experience.
 
 Grade: 8.5
 
