@@ -10,7 +10,7 @@ Hi! welcome to my portfolio. I’m a bachelor architecture student at TU Delft w
     <div class="card">
       <img src="assets/Bivium1.png" alt="Sfeerbeeld" />
       <div class="card-text">
-        graduation project: Crematorium Bivium 
+        Graduation project: Crematorium Bivium 
       </div>
     </div>
   </a>
