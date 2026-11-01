@@ -26,7 +26,8 @@ Grade: 8.5
 <br>
 <div id="lightbox">
   <button class="lightbox-nav prev" aria-label="Vorige afbeelding">&#10094;</button>
-  <img id="lightbox-img" src="">
+  <img id="lightbox-img" src="" alt="Vergrote projectafbeelding" draggable="false" title="Scroll om in te zoomen; sleep om de afbeelding te verplaatsen">
+  <button type="button" class="lightbox-close" aria-label="Sluiten">×</button>
   <button class="lightbox-nav next" aria-label="Volgende afbeelding">&#10095;</button>
 </div>
 
@@ -115,42 +116,172 @@ a:hover {
 .lightbox-nav.next {
   right: 32px;
 }
+
+/* Mousewheel zoom and dragging inside the enlarged photo */
+#lightbox { overflow: hidden; }
+#lightbox img {
+  transform-origin: center center;
+  cursor: zoom-in;
+  user-select: none;
+  -webkit-user-drag: none;
+  touch-action: none;
+  border-radius: 0;
+}
+#lightbox img.is-zoomed { cursor: grab; }
+#lightbox img.is-dragging { cursor: grabbing; }
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  font-size: 28px;
+  line-height: 1;
+  padding: 6px 12px;
+  cursor: pointer;
+}
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const images = Array.from(document.querySelectorAll('.zoomable'));
+  const images = Array.from(document.querySelectorAll('.rpc-gallery .zoomable'));
   const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const prevBtn = document.querySelector('.lightbox-nav.prev');
-  const nextBtn = document.querySelector('.lightbox-nav.next');
-  let currentIndex = 0;
+  if (!images.length || !lightbox) return;
 
-  function showImage(index) {
-    currentIndex = (index + images.length) % images.length;
-    lightboxImg.src = images[currentIndex].src;
-    lightbox.style.display = 'flex';
+  const photo = document.getElementById('lightbox-img');
+  const prev = lightbox.querySelector('.lightbox-nav.prev');
+  const next = lightbox.querySelector('.lightbox-nav.next');
+  const closeButton = lightbox.querySelector('.lightbox-close');
+
+  let index = 0;
+  let scale = 1;
+  let offsetX = 0;
+  let offsetY = 0;
+  let dragging = false;
+  let lastX = 0;
+  let lastY = 0;
+
+  function limitOffsets() {
+    const maxX = Math.max(0, (photo.clientWidth * scale - photo.clientWidth) / 2);
+    const maxY = Math.max(0, (photo.clientHeight * scale - photo.clientHeight) / 2);
+    offsetX = Math.max(-maxX, Math.min(maxX, offsetX));
+    offsetY = Math.max(-maxY, Math.min(maxY, offsetY));
   }
 
-  images.forEach((img, index) => {
-    img.addEventListener('click', () => {
-      showImage(index);
-    });
-  });
+  function render() {
+    limitOffsets();
+    photo.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px) scale(' + scale + ')';
+    photo.classList.toggle('is-zoomed', scale > 1);
+  }
 
-  prevBtn.addEventListener('click', (event) => {
-    event.stopPropagation();
-    showImage(currentIndex - 1);
-  });
+  function resetZoom() {
+    scale = 1;
+    offsetX = 0;
+    offsetY = 0;
+    dragging = false;
+    photo.classList.remove('is-dragging');
+    render();
+  }
 
-  nextBtn.addEventListener('click', (event) => {
-    event.stopPropagation();
-    showImage(currentIndex + 1);
-  });
+  function showImage(nextIndex) {
+    index = (nextIndex + images.length) % images.length;
+    photo.src = images[index].src;
+    photo.alt = images[index].alt;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    resetZoom();
+  }
 
-  // sluit door buiten de foto te klikken
-  lightbox.addEventListener('click', () => {
+  function closeLightbox() {
     lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+    resetZoom();
+  }
+
+  images.forEach(function (image, i) {
+    image.addEventListener('click', function () { showImage(i); });
+  });
+
+  prev.addEventListener('click', function (event) {
+    event.stopPropagation();
+    showImage(index - 1);
+  });
+
+  next.addEventListener('click', function (event) {
+    event.stopPropagation();
+    showImage(index + 1);
+  });
+
+  closeButton.addEventListener('click', function (event) {
+    event.stopPropagation();
+    closeLightbox();
+  });
+
+  // Zoom towards the mouse position; keep the page from scrolling.
+  lightbox.addEventListener('wheel', function (event) {
+    if (lightbox.style.display !== 'flex') return;
+    event.preventDefault();
+    const oldScale = scale;
+    const direction = event.deltaY < 0 ? 1.18 : 1 / 1.18;
+    scale = Math.min(8, Math.max(1, scale * direction));
+    if (scale === oldScale) return;
+
+    // Keep the detail underneath the cursor in the same place.
+    const relativeX = event.clientX - (window.innerWidth / 2 + offsetX);
+    const relativeY = event.clientY - (window.innerHeight / 2 + offsetY);
+    const ratio = scale / oldScale;
+    offsetX += relativeX * (1 - ratio);
+    offsetY += relativeY * (1 - ratio);
+    if (scale === 1) {
+      offsetX = 0;
+      offsetY = 0;
+    }
+    render();
+  }, { passive: false });
+
+  // Drag to explore details once zoomed in.
+  photo.addEventListener('pointerdown', function (event) {
+    if (scale <= 1 || event.button !== 0) return;
+    event.preventDefault();
+    dragging = true;
+    lastX = event.clientX;
+    lastY = event.clientY;
+    photo.setPointerCapture(event.pointerId);
+    photo.classList.add('is-dragging');
+  });
+
+  photo.addEventListener('pointermove', function (event) {
+    if (!dragging) return;
+    offsetX += event.clientX - lastX;
+    offsetY += event.clientY - lastY;
+    lastX = event.clientX;
+    lastY = event.clientY;
+    render();
+  });
+
+  function stopDragging() {
+    dragging = false;
+    photo.classList.remove('is-dragging');
+  }
+  photo.addEventListener('pointerup', stopDragging);
+  photo.addEventListener('pointercancel', stopDragging);
+  photo.addEventListener('lostpointercapture', stopDragging);
+
+  lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (lightbox.style.display !== 'flex') return;
+    if (event.key === 'Escape') closeLightbox();
+    if (event.key === 'ArrowLeft') showImage(index - 1);
+    if (event.key === 'ArrowRight') showImage(index + 1);
+  });
+  window.addEventListener('resize', function () {
+    if (lightbox.style.display === 'flex') render();
   });
 });
 </script>
