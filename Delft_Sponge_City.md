@@ -23,27 +23,126 @@ The strategy adapts to different urban settings. In the compact historic centre,
   <button type="button" class="delft-next" aria-label="Next image">❯</button>
 </div>
 <style>
-.delft-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
-.delft-gallery figure{margin:0}.delft-gallery img{width:100%;height:auto;cursor:zoom-in;border:1px solid #eee}
-.delft-gallery figcaption{font-size:12px;color:#666;margin-top:5px}
-#delft-lightbox:not([hidden]){position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.94);display:flex;align-items:center;justify-content:center;overflow:hidden}
-#delft-lightbox img{max-width:94vw;max-height:92vh;object-fit:contain;transform-origin:center;cursor:zoom-in}
-#delft-lightbox button{position:absolute;z-index:2;background:rgba(0,0,0,.45);border:0;color:white;font-size:26px;cursor:pointer;padding:12px}
-.delft-close{top:12px;right:15px}.delft-prev{left:12px;top:50%}.delft-next{right:12px;top:50%}
-@media(max-width:650px){.delft-gallery{grid-template-columns:1fr}}
+header img {
+  width: 140px !important;
+  height: auto !important;
+}  
+
+a {
+  color: #b20738;
+  font-weight: 400;        
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b20738;
+  text-decoration: none;
+  font-weight: 400;       
+}
+  
+.rpc-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.zoomable {
+  max-width: 220px;           /* pas aan als je ze groter/kleiner wilt */
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.zoomable.zoomed {
+  transform: scale(5);        /* hoeveelheid zoom */
+  cursor: zoom-out;
+  position: relative;
+  z-index: 10;
+}
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.lightbox-nav {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-nav:focus-visible {
+  outline: 2px solid #fff;
+}
+
+.lightbox-nav.prev {
+  left: 32px;
+}
+
+.lightbox-nav.next {
+  right: 32px;
+}
 </style>
+
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-const images=[...document.querySelectorAll('.delft-zoomable')],box=document.getElementById('delft-lightbox'),big=box.querySelector('img');
-let index=0,scale=1;
-function show(i){index=(i+images.length)%images.length;big.src=images[index].src;big.alt=images[index].alt;scale=1;big.style.transform='scale(1)';box.hidden=false;document.body.style.overflow='hidden'}
-function close(){box.hidden=true;document.body.style.overflow='';big.src=''}
-images.forEach((img,i)=>img.addEventListener('click',()=>show(i)));
-box.querySelector('.delft-close').onclick=close;
-box.querySelector('.delft-prev').onclick=()=>show(index-1);
-box.querySelector('.delft-next').onclick=()=>show(index+1);
-big.onclick=e=>{e.stopPropagation();scale=scale===1?2:1;big.style.transform='scale('+scale+')';big.style.cursor=scale===1?'zoom-in':'zoom-out'};
-box.onclick=e=>{if(e.target===box)close()};
-document.addEventListener('keydown',e=>{if(box.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(index-1);if(e.key==='ArrowRight')show(index+1)});
+document.addEventListener('DOMContentLoaded', function () {
+  const images = Array.from(document.querySelectorAll('.zoomable'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const prevBtn = document.querySelector('.lightbox-nav.prev');
+  const nextBtn = document.querySelector('.lightbox-nav.next');
+  let currentIndex = 0;
+
+  function showImage(index) {
+    currentIndex = (index + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+    lightbox.style.display = 'flex';
+  }
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      showImage(index);
+    });
+  });
+
+  prevBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    showImage(currentIndex + 1);
+  });
+
+  // sluit door buiten de foto te klikken
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
 });
 </script>
