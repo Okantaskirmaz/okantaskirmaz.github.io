@@ -6,6 +6,15 @@ Hi! welcome to my portfolio. I’m a bachelor architecture student at TU Delft w
 
 <div class="project-cards">
 
+  <a href="https://okantaskirmaz.github.io/Delft_Sponge_City" class="card-link">
+    <div class="card">
+      <img src="assets/Delft6.png" alt="Delft as an Interconnected Sponge City" />
+      <div class="card-text">
+        MSc Urbanism: Delft as an Interconnected Sponge City
+      </div>
+    </div>
+  </a>
+
   <a href="https://okantaskirmaz.github.io/Crematorium_Bivium" class="card-link">
     <div class="card">
       <img src="assets/Bivium1.png" alt="Sfeerbeeld" />
