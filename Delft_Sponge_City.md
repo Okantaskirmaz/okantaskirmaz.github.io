@@ -1,6 +1,6 @@
 # Delft as an Interconnected Sponge City
 
-Master of Science Urbanism — TU Delft 2026
+Master of Science Urbanism - TU Delft 2026
 
 How can Delft adapt to increasingly extreme rainfall towards 2100? This project explores how streets, public spaces and green infrastructure can work together as a connected urban water system. Through spatial analyses of flood exposure, surface permeability, housing and movement networks, vulnerable areas were identified across the city. The findings formed the basis for a strategy that combines water management with ecological connectivity, recreation and cycling.
 
