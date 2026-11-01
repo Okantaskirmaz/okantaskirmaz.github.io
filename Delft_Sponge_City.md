@@ -11,12 +11,12 @@ The strategy adapts to different urban settings. In the compact historic centre,
 <div class="rpc-container">
   <div class="rpc-text"></div>
   <div class="rpc-gallery">
+    <img class="zoomable" src="assets/Delft66.png" alt="Delft as an Interconnected Sponge City — final design poster">
     <img class="zoomable" src="assets/Delft11.png" alt="Delft concept image 1">
     <img class="zoomable" src="assets/Delft22.png" alt="Delft concept image 2">
     <img class="zoomable" src="assets/Delft33.png" alt="Delft concept image 3">
     <img class="zoomable" src="assets/Delft44.png" alt="Delft concept image 4">
     <img class="zoomable" src="assets/Delft55.png" alt="Delft concept image 5">
-    <img class="zoomable" src="assets/Delft66.png" alt="Delft concept image 6">
   </div>
 </div>
 <br>
@@ -45,19 +45,34 @@ a:hover {
 }
   
 .rpc-gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+  align-items: start;
 }
 
-.zoomable {
-  max-width: 220px;           /* pas aan als je ze groter/kleiner wilt */
+.rpc-gallery .zoomable {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
   cursor: zoom-in;
-  transition: transform 0.3s ease;
+}
+
+/* The vertical summary poster takes up both columns. */
+.rpc-gallery .zoomable:first-child {
+  grid-column: 1 / -1;
+}
+
+/* On small screens, show one drawing per row. */
+@media (max-width: 600px) {
+  .rpc-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .zoomable.zoomed {
-  transform: scale(5);        /* hoeveelheid zoom */
+  transform: scale(5);
   cursor: zoom-out;
   position: relative;
   z-index: 10;
