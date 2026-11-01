@@ -4,6 +4,16 @@
 
 <div class="entry">
   <div class="entry-left">
+    MSc, Urbanism<br>
+    <em>Technische Universiteit Delft</em>
+  </div>
+  <div class="entry-right">
+    <em>2026 - Present</em>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-left">
     Minor, (Re)Imagining Port Cities: Understanding Space, Society and Culture<br>
     <em>Technische Universiteit Delft</em>
   </div>
@@ -16,7 +26,7 @@
 
 <div class="entry">
   <div class="entry-left">
-    BSc, Bouwkunde<br>
+    BSc, Architecture, Urbanism and Building Sciences<br>
     <em>Technische Universiteit Delft</em>
   </div>
   <div class="entry-right">
@@ -46,7 +56,7 @@
     <em>Web editor at the Faculty of TPM, TU Delft. Responsible for managing and optimizing faculty websites, focusing on usability, up-to-date content, and online visibility.</em>
   </div>
   <div class="entry-right">
-    <em>Juli 2024 – Present</em>
+    <em>2024 – Present</em>
   </div>
 </div>
 
@@ -60,7 +70,7 @@
     <em>Festable is a unique event designed to raise student awareness about sustainability in a fun and trendy way. Together with five other enthusiastic students, we are organizing this event. From a DJ contest at an iconic location to inspiring talks and workshops on circular festivals, we combine entertainment with education, making sustainability accessible and exciting for everyone!</em>
   </div>
   <div class="entry-right">
-    <em>September 2024 – August 2025</em>
+    <em>2024 – 2025</em>
   </div>
 </div>
 
@@ -72,7 +82,7 @@
     <em>ExpresCie is a relatively new subcommittee of Lancet, dedicated to teaching students new skills through the organization of workshops and multi-day courses. Examples of activities include painting, screen printing, sculpting, or mindfulness. Together with four other enthusiastic students, I contribute to this committee to bring creativity and personal development to life.</em>
   </div>
   <div class="entry-right">
-    <em>September 2024 – August 2025</em>
+    <em>2024 – 2025</em>
   </div>
 </div>
 
