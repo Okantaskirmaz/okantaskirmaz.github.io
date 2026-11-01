@@ -1,6 +1,6 @@
 # Delft as an Interconnected Sponge City
 
-*Master of Science Urbanism — TU Delft | 2026*
+Master of Science Urbanism — TU Delft 2026
 
 How can Delft adapt to increasingly extreme rainfall towards 2100? This project explores how streets, public spaces and green infrastructure can work together as a connected urban water system. Through spatial analyses of flood exposure, surface permeability, housing and movement networks, vulnerable areas were identified across the city. The findings formed the basis for a strategy that combines water management with ecological connectivity, recreation and cycling.
 
@@ -8,19 +8,22 @@ The proposal introduces three complementary interventions: **Sponge Clusters**, 
 
 The strategy adapts to different urban settings. In the compact historic centre, interventions respond to narrow streets and existing buildings. In residential neighbourhoods, wider profiles allow more space for temporary storage and recreation. At the infrastructure edge, the corridor crosses above a lowered highway, reconnecting green landscapes on either side.
 
-<div class="delft-gallery">
-  <figure><img class="delft-zoomable" src="assets/Delft1.png" alt="Urban flood vulnerability analysis" loading="lazy"><figcaption>Urban flood vulnerability analysis</figcaption></figure>
-  <figure><img class="delft-zoomable" src="assets/Delft2.png" alt="Vulnerability typologies and strategic diagram" loading="lazy"><figcaption>Urban conditions and opportunities</figcaption></figure>
-  <figure><img class="delft-zoomable" src="assets/Delft3.png" alt="Sponge clusters, spine and porous urban fabric synthesis" loading="lazy"><figcaption>Sponge City design strategy</figcaption></figure>
-  <figure><img class="delft-zoomable" src="assets/Delft4.png" alt="Urban design typologies and regional strategy" loading="lazy"><figcaption>Adapting the Sponge Spine to different urban conditions</figcaption></figure>
-  <figure><img class="delft-zoomable" src="assets/Delft5.png" alt="Sponge Spine sections in dry and extreme rainfall conditions" loading="lazy"><figcaption>Living with the Sponge Spine: dry and rainy conditions</figcaption></figure>
-  <figure><img class="delft-zoomable" src="assets/Delft6.png" alt="Delft as an Interconnected Sponge City final design poster" loading="lazy"><figcaption>Final design poster</figcaption></figure>
+<div class="rpc-container">
+  <div class="rpc-text"></div>
+  <div class="rpc-gallery">
+    <img class="zoomable" src="assets/Delft1.png" alt="Delft concept image 1">
+    <img class="zoomable" src="assets/Delft2.png" alt="Delft concept image 2">
+    <img class="zoomable" src="assets/Delft3.png" alt="Delft concept image 3">
+    <img class="zoomable" src="assets/Delft4.png" alt="Delft concept image 4">
+    <img class="zoomable" src="assets/Delft5.png" alt="Delft concept image 5">
+    <img class="zoomable" src="assets/Delft6.png" alt="Delft concept image 6">
+  </div>
 </div>
-<div id="delft-lightbox" role="dialog" aria-label="Enlarged project image" aria-modal="true" hidden>
-  <button type="button" class="delft-close" aria-label="Close">×</button>
-  <button type="button" class="delft-prev" aria-label="Previous image">❮</button>
-  <img alt="Enlarged project drawing">
-  <button type="button" class="delft-next" aria-label="Next image">❯</button>
+<br>
+<div id="lightbox">
+  <button class="lightbox-nav prev" aria-label="Vorige afbeelding">&#10094;</button>
+  <img id="lightbox-img" src="">
+  <button class="lightbox-nav next" aria-label="Volgende afbeelding">&#10095;</button>
 </div>
 <style>
 header img {
