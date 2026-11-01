@@ -11,12 +11,12 @@ The strategy adapts to different urban settings. In the compact historic centre,
 <div class="rpc-container">
   <div class="rpc-text"></div>
   <div class="rpc-gallery">
-    <img class="zoomable" src="assets/Delft1.png" alt="Delft concept image 1">
-    <img class="zoomable" src="assets/Delft2.png" alt="Delft concept image 2">
-    <img class="zoomable" src="assets/Delft3.png" alt="Delft concept image 3">
-    <img class="zoomable" src="assets/Delft4.png" alt="Delft concept image 4">
-    <img class="zoomable" src="assets/Delft5.png" alt="Delft concept image 5">
-    <img class="zoomable" src="assets/Delft6.png" alt="Delft concept image 6">
+    <img class="zoomable" src="assets/Delft11.png" alt="Delft concept image 1">
+    <img class="zoomable" src="assets/Delft22.png" alt="Delft concept image 2">
+    <img class="zoomable" src="assets/Delft33.png" alt="Delft concept image 3">
+    <img class="zoomable" src="assets/Delft44.png" alt="Delft concept image 4">
+    <img class="zoomable" src="assets/Delft55.png" alt="Delft concept image 5">
+    <img class="zoomable" src="assets/Delft66.png" alt="Delft concept image 6">
   </div>
 </div>
 <br>
