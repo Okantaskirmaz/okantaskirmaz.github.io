@@ -12,6 +12,8 @@
   </div>
 </div>
 
+<br>
+
 <div class="entry">
   <div class="entry-left">
     Minor, (Re)Imagining Port Cities: Understanding Space, Society and Culture<br>
@@ -38,7 +40,7 @@
 
 <div class="entry">
   <div class="entry-left">
-    Propedeuse, Bouwkunde<br>
+    Propedeuse, Architecture and Construction Engineering<br>
     <em>De Haagse Hogeschool / The Hague University of Applied Sciences</em>
   </div>
   <div class="entry-right">
