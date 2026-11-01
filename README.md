@@ -8,7 +8,7 @@ Welcome to my portfolio! I’m currently pursuing a Master’s degree in Urbanis
 
   <a href="https://okantaskirmaz.github.io/Delft_Sponge_City" class="card-link">
     <div class="card">
-      <img src="assets/Delft6.png" alt="Delft as an Interconnected Sponge City" />
+      <img src="assets/Delft77.png" alt="Delft as an Interconnected Sponge City" />
       <div class="card-text">
         MSc Urbanism: Delft as an Interconnected Sponge City
       </div>
