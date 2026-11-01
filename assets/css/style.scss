@@ -1,0 +1,10 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Hide the GitHub Pages theme's automatic profile link in the sidebar.
+   Keep the custom Projects, Resume and LinkedIn links visible. */
+header p.view {
+  display: none !important;
+}
