@@ -1,6 +1,6 @@
 # Projects
 
-Hi! welcome to my portfolio. I’m a bachelor architecture student at TU Delft with a growing focus on urbanism and urban design. Here you’ll find a selection of final projects ranging from architectural proposals to urban-scale interventions, presented through drawings and visualizations.
+Welcome to my portfolio! I’m currently pursuing a Master’s degree in Urbanism at TU Delft, following my Bachelor’s degree in Architecture, Urbanism and Building Sciences. Here you can find a selection of projects from both my Bachelor’s and Master’s studies, ranging from architectural designs to large-scale urban interventions, presented through drawings, analyses and visualizations.
 
 <br>
 
@@ -19,7 +19,7 @@ Hi! welcome to my portfolio. I’m a bachelor architecture student at TU Delft w
     <div class="card">
       <img src="assets/Bivium1.png" alt="Sfeerbeeld" />
       <div class="card-text">
-        Graduation project: Crematorium Bivium 
+        BSc Architecture, Urbanism and Building Sciences: Graduation project; Crematorium Bivium 
       </div>
     </div>
   </a>
@@ -28,7 +28,7 @@ Hi! welcome to my portfolio. I’m a bachelor architecture student at TU Delft w
     <div class="card">
       <img src="assets/Port Cities 4.jpg" alt="Sfeerbeeld" />
       <div class="card-text">
-        Minor, (Re)Imagining Port Cities: Understanding Space, Society and Culture Q1
+        Minor: (Re)Imagining Port Cities: Understanding Space, Society and Culture
       </div>
     </div>
   </a>
@@ -37,7 +37,7 @@ Hi! welcome to my portfolio. I’m a bachelor architecture student at TU Delft w
     <div class="card">
       <img src="assets/Poster_1.jpg" alt="Sfeerbeeld" />
       <div class="card-text">
-        Studio de Nieuwe Tuinstad
+        BSc Architecture, Urbanism and Building Sciences: Studio; De Nieuwe Tuinstad
       </div>
     </div>
   </a>
