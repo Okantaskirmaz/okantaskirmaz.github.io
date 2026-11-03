@@ -4,6 +4,24 @@ Welcome to my portfolio! I’m currently pursuing a Master’s degree in Urbanis
 
 <br>
 
+<div class="software-skills">
+  <h3>Software Skills</h3>
+  <div class="skills-list">
+    <span>QGIS,</span>
+    <span>Rhino 3D,</span>
+    <span>SketchUp,</span>
+    <span>D5 Render,</span>
+    <span>Affinity Designer,</span>
+    <span>Adobe Photoshop,</span>
+    <span>Adobe Illustrator,</span>
+    <span>Adobe Indesign,</span>
+    <span>Procreate</span>
+  </div>
+</div>
+
+<br>
+
+
 <div class="project-cards">
 
   <a href="https://okantaskirmaz.github.io/Delft_Sponge_City" class="card-link">
