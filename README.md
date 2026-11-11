@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Urbanism & Architecture Portfolio"
+description: "Explore the portfolio of Okan Taskirmaz, MSc Urbanism student at TU Delft, featuring urban design, architecture and spatial planning projects."
+---
+
 # Projects
 
 Welcome to my portfolio! I’m currently pursuing a Master’s degree in Urbanism at TU Delft, following my Bachelor’s degree in Architecture, Urbanism and Building Sciences. Here you can find a selection of projects from both my Bachelor’s and Master’s studies, ranging from architectural designs to large-scale urban interventions, presented through drawings, analyses and visualizations.
