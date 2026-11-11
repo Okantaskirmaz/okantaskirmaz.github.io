@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /index.html
 title: "Urbanism & Architecture Portfolio"
 description: "Explore the portfolio of Okan Taskirmaz, MSc Urbanism student at TU Delft, featuring urban design, architecture and spatial planning projects."
 ---
